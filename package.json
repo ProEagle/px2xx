@@ -1,0 +1,86 @@
+{
+	"name": "px2xx",
+	"displayName": "px2xx",
+	"description": "px单位转换",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"keywords": [
+		"vh",
+		"px vw",
+		"px rem",
+		"px2rem",
+		"px2vw",
+		"px2vh",
+		"px2xx"
+	],
+	"categories": [
+		"Other"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ProEagle/px2xx"
+	},
+	"icon": "icon.png",
+	"publisher": "ProEagle",
+	"activationEvents": [
+		"onCommand:extension.px2xx",
+		"onLanguage:html",
+		"onLanguage:css",
+		"onLanguage:vue",
+		"onLanguage:less",
+		"onLanguage:scss",
+		"onLanguage:sass",
+		"onLanguage:stylus"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.px2xx",
+				"title": "px2xx"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "px2xx configure",
+			"properties": {
+				"px2xx.width": {
+					"type": "number",
+					"default": 750,
+					"description": "屏幕最大宽度，用来转换vw，rem"
+				},
+				"px2xx.height": {
+					"type": "number",
+					"default": 667,
+					"description": "屏幕最大高度，用于转换vh"
+				},
+				"px2xx.toFixedNum": {
+					"type": "number",
+					"default": 4,
+					"description": "换算单位时保留小数长度"
+				},
+				"px2xx.customXX": {
+					"type": "string",
+					"default": "1%xx",
+					"description": "自定义转换，格式为rate%unit，rate为有效数字，unit为转换后的单位，如1%xx，4px可以通过计算(4*1)xx，最后出来结果就是4xx。"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}

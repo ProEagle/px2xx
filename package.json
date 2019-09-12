@@ -1,8 +1,8 @@
 {
 	"name": "px2xx",
 	"displayName": "px2xx",
-	"description": "px单位转换",
-	"version": "0.0.1",
+	"description": "px单位转换，转rem，vw，vh及自定义单位。可配置最大宽度，最大高度，以及自定义单位比率。",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.35.0"
 	},

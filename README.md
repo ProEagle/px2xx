@@ -4,7 +4,7 @@
 
 > 支持px转换vw、vh、rem以及自定义转换的提示插件
 
-![演示图](img/px2xx.gif)
+![演示图](https://s3.bmp.ovh/imgs/2021/09/c251a0dc8755f3d4.gif)
 
 ### 支持文件类型
 * html
